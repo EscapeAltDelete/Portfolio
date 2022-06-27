@@ -2,9 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "node a.mjs",
+  "main": "a.mjs",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start":"node a.mjs"
   },
   "repository": {
     "type": "git",
