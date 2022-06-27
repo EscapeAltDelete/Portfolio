@@ -7,7 +7,3 @@ const listener = (req,res) => {
     res.end(response());
 };
 http.createServer(listener).listen(3030);
-
-
-
-
