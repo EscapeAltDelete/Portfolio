@@ -1,9 +1,9 @@
 import http from 'http';
+import * as fs from 'fs/promises';
+import { readFile } from 'fs';
 
+const page = await fs.readFile('./t.html').then(c => c.toString());
 
-const response =()=>"hallo ik ben Finn"
-const listener = (req,res) => {
-    
-    res.end(response());
-};
+const listener = (req,res) => res.end(page);
+
 http.createServer(listener).listen(3030);

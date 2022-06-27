@@ -1,15 +1,46 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+       
+    
 <style>
+    body{
+        height:100vh;
+        width:100vw;
+        background-color: silver;
+        display:grid;
+        grid:15vh 80vh 5vh / 100vw;
+        overflow: hidden;
+        margin:0;
+    }
+    main{
+      display:grid;
+      grid:repeat(4,25%)/5% repeat(4,20%);
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+        aspect-ratio: 2/9;
+        grid-area:2/2/4/4;
+        max-height: 100%;
+        border-radius: 50%;
+
+    }
     .name{
         font-size:50rem;
     }
-</style>
+</style> 
+</head>
 <body>
-<div class="name">
-    Finn
-</div><div class="name">
-    Erik
-</div>
-<input><div class="aap">Send</div>
+    <header>
+
+    </header>
+<main>
+<img src="https://cdn.discordapp.com/attachments/935362268554752073/990942273946681424/IMG_0884.png">
+</main>
+<footer>
+
+</footer>
 </body>
 <script>
 
@@ -19,3 +50,4 @@ document.querySelector(".aap").addEventListener("click",()=>show(document.queryS
 document.querySelector(".aap").style.background = 'hotpink';
 console.log(window)
 </script>
+</html>
