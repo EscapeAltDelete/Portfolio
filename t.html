@@ -7,47 +7,64 @@
     body{
         height:100vh;
         width:100vw;
-        background-color: silver;
+        background-color: whitesmoke;
         display:grid;
-        grid:15vh 80vh 5vh / 100vw;
+       
         overflow: hidden;
         margin:0;
     }
     main{
       display:grid;
-      grid:repeat(4,25%)/5% repeat(4,20%);
-      align-items: center;
-      justify-content: center;
+    
+    
+      background-color: black;
     }
     img{
         aspect-ratio: 2/9;
-        grid-area:2/2/4/4;
-        max-height: 100%;
+     
+        max-height:300px;
         border-radius: 50%;
 
     }
     .name{
         font-size:50rem;
     }
+    #Test{
+        height:100%;
+        width:40vw;
+        display:grid;
+        align-items: center;
+        justify-content: center;
+      grid:100%/50% 50%;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+
+color:black;
+font-size:2em;
+    }
+    p{   
+        color:white;
+      
+    }
+    #h{
+        grid-area: 1/1/2/2;
+    }
 </style> 
 </head>
-<body>
+<body>  
     <header>
 
     </header>
 <main>
-<img src="https://cdn.discordapp.com/attachments/935362268554752073/990942273946681424/IMG_0884.png">
+    
+<div id="Test"><img id="h" src="https://cdn.discordapp.com/attachments/935362268554752073/990942273946681424/IMG_0884.png">
+<p>Hallo teststststtst</p> 
+</div>
 </main>
 <footer>
 
 </footer>
 </body>
 <script>
-
-
-const show = (name,hour,min)=> document.body.textContent = `Hallo ${name}. Het is ${hour} ${min} uur`;
-document.querySelector(".aap").addEventListener("click",()=>show(document.querySelector("input").value,new Date().getHours(),new Date().getMinutes()));
-document.querySelector(".aap").style.background = 'hotpink';
-console.log(window)
+    
 </script>
 </html>
