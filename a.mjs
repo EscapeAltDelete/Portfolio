@@ -2,8 +2,8 @@ import http from 'http';
 import * as fs from 'fs/promises';
 import { readFile } from 'fs';
 
-const page = await fs.readFile('./index.html').then(c => c.toString());
+const page =(path)=>fs.readFile(`.${path}`).then(c => c.toString());
 
-const listener = (req,res) => res.end(page);
+const listener = async(req,res) => res.end(await page(req.url==="/draw.html"?"/draw.html":"/index.html"));
 
 http.createServer(listener).listen(3030);

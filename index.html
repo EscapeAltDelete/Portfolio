@@ -1,12 +1,72 @@
-<!DOCTYPE html><html lang="en"><head>
-    <script src="https://cdn.jsdelivr.net/gh/EscapeAltDelete/Portfolio@main/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/EscapeAltDelete/Portfolio@main/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/EscapeAltDelete/Portfolio@main/style.css">
-    <meta charset="utf-8">
+<!DOCTYPE html>
+    <html>
+        <head>
 
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/gh/EscapeAltDelete/Portfolio@main/YO.js"></script>
-  
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+ body{
+    height:100vh;
+    width:100vw;
+    margin:0;
+    display:grid;
+    grid:10vh 80vh 10vh / 5vw 94vw 1vw;
+    align-items: center;
+    justify-content: center;
+ }
+ header{
+    height:100%;
+ }
+ main{
+    grid-area:2/2/3/3;
+    height:100%;
+    width:100%;
+    display:grid;
+    grid:repeat(2,1fr)/1fr 2fr;
+    align-items: center;
+    justify-content: center;
+ }
+ #img{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid:100%/repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+ }
+ img{
+    aspect-ratio:1/1;
+    max-height:250px;
+    border-radius:50%;
+ }
 
-</body></html>
+ iframe{
+   grid-area:1/2/3/3;
+   border:none;
+width:100%;
+height:100%;   
+ }
+ #imgtext{
+    font-family:Knewave
+ }
+</style> 
+</head>
+<body>
+    <header>
+
+    </header>
+<main>
+<div id="img">
+<img src="https://cdn.discordapp.com/attachments/935362268554752073/990942273946681424/IMG_0884.png">
+<div id="imgtext">Dit is de website van Finn</div>
+</div>
+<iframe src="draw.html">
+
+</iframe>
+</main>
+<footer>
+
+</footer>
+</body>
+<script>
+</script>
+</html>
