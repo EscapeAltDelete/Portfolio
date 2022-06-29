@@ -4,6 +4,10 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+    ::-webkit-scrollbar{
+      appearance:none;
+    }
+
  body{
     height:100vh;
     width:100vw;
@@ -12,9 +16,15 @@
     grid:10vh 80vh 10vh / 5vw 94vw 1vw;
     align-items: center;
     justify-content: center;
+    cursor: none;
+    overflow:none;
+    scrollbar-width: none;
  }
  header{
     height:100%;
+    background: rgb(2,0,36);
+
+grid-area:1/1/2/4;
  }
  main{
     grid-area:2/2/3/3;
@@ -38,6 +48,10 @@
     max-height:250px;
     border-radius:50%;
  }
+ .scroller{
+   background-color: blue;
+   appearance:none;
+ }
 
  iframe{
    grid-area:1/2/3/3;
@@ -47,6 +61,12 @@ height:100%;
  }
  #imgtext{
     font-family:Knewave
+ }
+ footer{
+   height:100%;
+   grid-area:3/1/4/4;
+   background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
  }
 </style> 
 </head>
@@ -68,5 +88,16 @@ height:100%;
 </footer>
 </body>
 <script>
+   console.log(window)
+   const random = (max) => Math.round(Math.random()*max); 
+   const color =()=>`hsl(${random(360)},${random(90)}%,${random(90)}%)`;
+   const bg = `linear-gradient(90deg, ${color()} 0%, ${color()} 100%)`;
+   ['header','footer'].forEach(x => document.querySelector(x).style.backgroundImage = bg);
+   const c = document.body.innerHTML += `<div id="paint"></div>`;
+   document.querySelector('#paint').style =`z-index:-1;height:50px;aspect-ratio:1/1;border-radius:50%;background:${color()};position:fixed;`
+   window.addEventListener("mousemove",(ev)=>{
+      document.querySelector('#paint').style.top = ev.clientY + 'px';
+      document.querySelector('#paint').style.left = ev.clientX + 'px';
+   })
 </script>
 </html>
